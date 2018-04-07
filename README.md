@@ -1,2 +1,2 @@
 # testJenkins
-用于测试jenkins的测试项目
+用于测试jenkins的项目

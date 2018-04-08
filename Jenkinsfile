@@ -12,7 +12,7 @@ rm -rf ./webapps/testJenkins
 sleep 1
 status=""$status
 echo $status
-if [ $status == "200" ] ; then 
+if [ "$status"x = "200"x ] ; then 
   echo \'tomcat is started\'
   ./bin/shutdown.sh
  else 

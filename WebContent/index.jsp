@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Welcome to Jenkins Worlds...
+欢迎使用jenkins
 </body>
 </html>

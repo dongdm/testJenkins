@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'pwd'
+        sh '''pwd
+mvn package'''
       }
     }
   }

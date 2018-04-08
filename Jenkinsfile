@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        echo 'hello'
+        sh 'pwd'
       }
     }
   }

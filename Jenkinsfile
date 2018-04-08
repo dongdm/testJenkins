@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('input') {
+    stage('init') {
       steps {
-        input(message: 'input your name', id: 'name')
-      }
-    }
-    stage('print') {
-      steps {
-        sh 'echo "${name}"'
-        echo 'name'
+        echo 'hello'
       }
     }
   }

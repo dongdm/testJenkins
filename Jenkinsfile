@@ -8,7 +8,7 @@ pipeline {
     }
     stage('print') {
       steps {
-        echo 'Delopy'
+        echo '${name}'
       }
     }
   }

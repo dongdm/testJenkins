@@ -7,7 +7,7 @@ pipeline {
 mvn package
 dir
 cp ./target/*.war /d/JAVA/apache-tomcat-7.0.79/wtpwebapps/
-status=\'curl -I -m 10 -o /dev/null -s -w %{http_code} http://localhost:9090\'
+status=`curl -I -m 10 -o /dev/null -s -w %{http_code} http://localhost:9090`
 echo ${status}
 '''
       }

@@ -9,6 +9,7 @@ pipeline {
     stage('print') {
       steps {
         sh 'echo ${name}'
+        echo 'name'
       }
     }
   }

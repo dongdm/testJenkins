@@ -11,11 +11,11 @@ echo ${status}
 cd /d/JAVA/apache-tomcat-7.0.79
 if [ $status -eq 200 ] ; then 
   echo \'tomcat is started\'
-  ./bin/shutdown.sh
+  sh ./bin/shutdown.sh
  else 
   echo \'tomcat is stoped\'
 fi
-./bin/startup.sh 
+sh ./bin/startup.sh 
 
 
 '''

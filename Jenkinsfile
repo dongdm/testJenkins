@@ -17,21 +17,15 @@ if [ $status == "200" ] ; then
   ./bin/shutdown.sh
  else 
   echo \'tomcat is stoped\'
-fi'''
+fi
+sleep 1'''
       }
     }
     stage('start') {
       steps {
         sh '''sleep 1 
 cd /d/JAVA/apache-tomcat-7.0.79
-./bin/startup.sh'''
-      }
-    }
-    stage('encurl') {
-      steps {
-        sh '''sleep 20
-status=`curl -I -m 10 -o /dev/null -s -w %{http_code} http://localhost:9090`
-echo $status'''
+./bin/startup.sh &'''
       }
     }
   }

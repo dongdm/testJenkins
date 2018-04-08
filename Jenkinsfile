@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('input') {
       steps {
         input(message: 'input your name', id: 'name', ok: 'dongdm')
+      }
+    }
+    stage('print') {
+      steps {
+        echo 'Delopy'
       }
     }
   }

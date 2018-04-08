@@ -5,7 +5,8 @@ pipeline {
       steps {
         sh '''pwd
 mvn package
-dir'''
+dir
+copy ./target/*.war D:\\\\JAVA\\\\apache-tomcat-7.0.79\\\\wtpwebapps\\\\'''
       }
     }
   }

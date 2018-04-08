@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('input') {
       steps {
-        input(message: 'input your name', id: 'name', ok: 'dongdm')
+        input(message: 'input your name', id: 'name')
       }
     }
     stage('print') {

@@ -14,9 +14,6 @@ status=""$status
 echo $status
 if [ $status = "200" ]; then 
   echo \'tomcat is started\'
-  #./bin/shutdown.sh
- else 
-  echo \'tomcat is stoped\'
 fi
 sleep 1'''
       }

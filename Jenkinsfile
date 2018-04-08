@@ -16,9 +16,13 @@ if [ $status -eq 200 ] ; then
   ./bin/shutdown.sh
  else 
   echo \'tomcat is stoped\'
-fi
-sleep 1 
-./bin/startup.sh '''
+fi'''
+      }
+    }
+    stage('start') {
+      steps {
+        sh '''sleep 1
+./bin/startup.sh'''
       }
     }
   }

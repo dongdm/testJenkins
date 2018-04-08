@@ -15,7 +15,7 @@ if [ $status -eq 200 ] ; then
  else 
   echo \'tomcat is stoped\'
 fi
-./bin/startup.sh
+./bin/startup.sh 
 
 
 '''

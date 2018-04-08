@@ -18,12 +18,5 @@ fi
 sleep 1'''
       }
     }
-    stage('start') {
-      steps {
-        sh '''sleep 1 
-cd /d/JAVA/apache-tomcat-7.0.79
-./bin/startup.sh &'''
-      }
-    }
   }
 }

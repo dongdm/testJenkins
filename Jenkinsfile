@@ -8,7 +8,7 @@ pipeline {
     }
     stage('print') {
       steps {
-        sh 'echo ${name}'
+        sh 'echo "${name}"'
         echo 'name'
       }
     }

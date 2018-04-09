@@ -3,19 +3,17 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh '''pwd
-mvn package
+        sh '''mvn package
 cp ./target/testJenkins-0.0.1-SNAPSHOT.war /d/JAVA/apache-tomcat-7.0.79/wtpwebapps/testJenkins.war
+sleep 1 
+rm -rf /d/JAVA/apache-tomcat-7.0.79/webapps/testJenkins
+sleep 1
 status=`curl -I -m 10 -o /dev/null -s -w %{http_code} http://localhost:9090`
-echo ${status}
-cd /d/JAVA/apache-tomcat-7.0.79
-if [ $status -eq 200 ] ; then 
-  echo \'tomcat is started\'
-  sh ./bin/shutdown.sh
- else 
-  echo \'tomcat is stoped\'
+if [ $status -eq 200 ]; then
+  sh /d/JAVA/apache-tomcat-7.0.79/bin/shutdown.sh
 fi
-sh ./bin/startup.sh 
+sleep 1
+sh /d/JAVA/apache-tomcat-7.0.79/bin/startup.sh &
 '''
       }
     }

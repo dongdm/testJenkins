@@ -31,6 +31,18 @@ document公文; 文档，证件; 记录; 证明; 为…提供证明
 		<td>2</td>
 		<td>piwensheng</td>
 	</tr>
+	<tr>
+		<td>编号</td>
+		<td>姓名</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>dongdingming</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>piwensheng</td>
+	</tr>
 </table>
 </body>
 </html>

@@ -1,16 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('git') {
+    stage('deploy') {
       steps {
-        sh 'git --version'
+        sh 'pwd'
       }
     }
-    stage('javaTest') {
+    stage('end') {
       steps {
-        sh '''java -version
-echo "Hello" 
-mvn --v'''
+        sh 'echo "deploy end"'
       }
     }
   }

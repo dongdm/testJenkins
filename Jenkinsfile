@@ -11,6 +11,7 @@ cd "${tomcatPath}"
 ps -ef | grep tocmat 
 pwd 
 nohup /root/tomcat/apache-tomcat-8.5.29/bin/startup.sh
+sleep 1000000
 
 
 '''

@@ -6,7 +6,7 @@ pipeline {
         sh '''pwd
 tomcatPath="/root/tomcat/apache-tomcat-8.5.29/bin"
 mvn package
-mv ./*.war "${tomcatPath}/test.war"
+mv ./target/*.war "${tomcatPath}/test.war"
 cd "${tomcatPath}"
 ./startup.sh
 

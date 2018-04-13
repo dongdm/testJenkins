@@ -16,10 +16,5 @@ nohup ../bin/startup.sh
 '''
       }
     }
-    stage('end') {
-      steps {
-        sh 'echo "deploy end"'
-      }
-    }
   }
 }

@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('deploy') {
       steps {
-        sh 'pwd'
+        sh '''pwd
+tomcatPath="/root/tomcat/apache-tomcat-8.5.29/bin"
+mvn package
+mv ./*.war "${tomcatPath}/test.war"
+cd "${tomcatPath}"
+./startup.sh
+
+'''
       }
     }
     stage('end') {

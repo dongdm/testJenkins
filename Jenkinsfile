@@ -11,7 +11,6 @@ cd "${tomcatPath}"
 ps -ef | grep tocmat 
 pwd 
 nohup ../bin/startup.sh
-sleep 1000000
 
 
 '''

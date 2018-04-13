@@ -10,8 +10,7 @@ mv ./target/*.war "${tomcatPath}/test.war"
 cd "${tomcatPath}" 
 ps -ef | grep tocmat 
 pwd 
-sh `nohup ../bin/startup.sh &`
-
+nohup ../bin/startup.sh &
 
 '''
       }

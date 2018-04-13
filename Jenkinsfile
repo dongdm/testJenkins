@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('svn') {
       steps {
-        sh 'mvn -verson'
+        sh 'mvn -v'
       }
     }
   }

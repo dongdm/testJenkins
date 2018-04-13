@@ -9,7 +9,8 @@ mvn package
 mv ./target/*.war "${tomcatPath}/test.war"
 cd "${tomcatPath}" 
 ps -ef | grep tocmat 
-sh ./startup.sh & 
+pwd 
+./startup.sh & 
 
 
 '''

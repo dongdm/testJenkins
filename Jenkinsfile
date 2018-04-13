@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('svn') {
+    stage('git') {
       steps {
-        sh 'mvn -v'
+        sh 'git --version'
       }
     }
   }

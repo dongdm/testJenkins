@@ -7,8 +7,10 @@ pipeline {
 tomcatPath="/root/tomcat/apache-tomcat-8.5.29/bin"
 mvn package
 mv ./target/*.war "${tomcatPath}/test.war"
-cd "${tomcatPath}"
-./startup.sh
+cd "${tomcatPath}" 
+ps -ef | grep tocmat 
+sh ./startup.sh & 
+
 
 '''
       }

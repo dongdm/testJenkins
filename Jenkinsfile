@@ -6,5 +6,10 @@ pipeline {
         sh 'git --version'
       }
     }
+    stage('javaTest') {
+      steps {
+        sh 'java -version'
+      }
+    }
   }
 }

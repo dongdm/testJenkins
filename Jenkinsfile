@@ -9,7 +9,8 @@ pipeline {
     stage('javaTest') {
       steps {
         sh '''java -version
-echo "Hwllo"'''
+echo "Hello" 
+mvn --v'''
       }
     }
   }

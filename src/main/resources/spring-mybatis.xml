@@ -65,6 +65,7 @@
      -->
 	<property name="testWhileIdle" value="true" />
 	<property name="filters" value="stat" />
+	<property name="verifyServerCertificate" value="false"></property>
   </bean>
      
     <!-- mybatis文件配置，扫描所有mapper文件 -->

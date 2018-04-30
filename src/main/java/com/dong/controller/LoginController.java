@@ -29,7 +29,7 @@ public class LoginController {
 		return view;
 	}
 	
-	@RequestMapping("/login")
+	@RequestMapping("/getTest")
 	@ResponseBody
 	public Test getTest() {
 		Test test = new Test();

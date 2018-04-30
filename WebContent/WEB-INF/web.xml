@@ -7,7 +7,7 @@
 	<!-- 读取spring配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:conf/spring.xml</param-value>
+        <param-value>classpath:spring.xml</param-value>
     </context-param>
  
     <!-- Spring字符集过滤器 -->

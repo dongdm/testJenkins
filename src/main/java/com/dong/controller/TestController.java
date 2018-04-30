@@ -14,7 +14,7 @@ public class TestController {
 	public String getTest() {
 		Test test = new Test();
 		test.setId(1);
-		test.setName("test");
+		test.setName("小名小名");
 		return test.toString();
 	}
 

@@ -29,13 +29,5 @@ public class LoginController {
 		return view;
 	}
 	
-	@RequestMapping(value="/getTest", produces="application/json")
-	@ResponseBody
-	public Test getTest() {
-		Test test = new Test();
-		test.setId(1);
-		test.setName("test");
-		return test;
-	}
-
+	
 }

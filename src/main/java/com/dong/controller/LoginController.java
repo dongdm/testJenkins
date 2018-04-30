@@ -29,7 +29,7 @@ public class LoginController {
 		return view;
 	}
 	
-	@RequestMapping("/getTest")
+	@RequestMapping(value="/getTest", produces="application/json")
 	@ResponseBody
 	public Test getTest() {
 		Test test = new Test();

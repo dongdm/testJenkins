@@ -7,6 +7,6 @@
 <title>登录</title>
 </head>
 <body>
-登录成功，{word}
+登录成功，${word}
 </body>
 </html>

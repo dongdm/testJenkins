@@ -9,7 +9,7 @@ import com.dong.model.Test;
 @RestController
 public class TestController {
 	
-	@RequestMapping(value="/getTest", produces="text/html; charset=UTF-8")
+	@RequestMapping(value="/getTest")
 	@ResponseBody
 	public String getTest() {
 		Test test = new Test();

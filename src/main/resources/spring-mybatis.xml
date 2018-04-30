@@ -60,7 +60,9 @@
     <property name="connectionProperties">
       <value>clientEncoding=UTF-8</value>
     </property>
+    <!-- 
     <property name="validationQuery" value="SELECT 1" />
+     -->
 	<property name="testWhileIdle" value="true" />
 	<property name="filters" value="stat" />
   </bean>

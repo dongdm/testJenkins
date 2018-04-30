@@ -11,11 +11,11 @@ public class TestController {
 	
 	@RequestMapping(value="/getTest", produces="application/json")
 	@ResponseBody
-	public Test getTest() {
+	public String getTest() {
 		Test test = new Test();
 		test.setId(1);
 		test.setName("test");
-		return test;
+		return test.toString();
 	}
 
 

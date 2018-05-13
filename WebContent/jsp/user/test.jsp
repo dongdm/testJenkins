@@ -36,6 +36,8 @@
              <tr>
                <th>编号</th>
                <th>名称</th>
+               <th>手机号</th>
+               <th>邮箱</th>
                <th>操作</th>
              </tr>
            </thead>
@@ -62,6 +64,8 @@
 					return <tr>
 							<td>{id}</td>
 							<td>{item.name}</td>
+							<td>{item.telphone}</td>
+							<td>{item.email}</td>
 							<td><a href={editPath}><span className="label label-default">修改</span></a>
                                 &nbsp;&nbsp;
 							    <a href={delPath}><span className="label label-default">删除</span></a>

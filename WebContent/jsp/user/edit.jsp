@@ -34,13 +34,18 @@
 <h1>修改-编号[${test.id}]</h1>
 <form action="<%=request.getContextPath()%>/user/doEdit" method="post" class="form-inline" role="form">
 	<div class="form-group">
-		<label class="sr-only" for="id">编号</label>
-		<input typ="text" class="form-control sr-only" name="id" id="id" placeholder="请输入编号" value="${test.id}"/>
+		<label class="sr-only" for="name">名称</label>
+		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称" value="${test.name}"/>
 	</div>
 	<div style="height: 10px;"></div>
 	<div class="form-group">
-		<label class="sr-only" for="name">名称</label>
-		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称" value="${test.name}"/>
+		<label class="sr-only" for="telphone">手机号</label>
+		<input type="text" class="form-control" name="telphone" id="telphone" placeholder="请输入手机号">
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="form-group">
+		<label class="sr-only" for="email"></label>
+		<input type="text" class="form-control" name="email" id="email" placeholder="请输入邮箱">
 	</div>
 	<div style="height: 10px;"></div>
 	<button type="submit" class="btn btn-default">提交</button>

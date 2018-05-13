@@ -33,13 +33,18 @@
 <div class="container" style="margin-top: 65px;">
 <form action="<%=request.getContextPath()%>/user/doAdd" method="post" class="form-inline" role="form">
 	<div class="form-group">
-		<label class="sr-only" for="id">编号</label>
-		<input typ="text" class="form-control" name="id" id="id" placeholder="请输入编号">
+		<label class="sr-only" for="name">名称</label>
+		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称">
 	</div>
 	<div style="height: 10px;"></div>
 	<div class="form-group">
-		<label class="sr-only" for="name">名称</label>
-		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称">
+		<label class="sr-only" for="telphone">手机号</label>
+		<input type="text" class="form-control" name="telphone" id="telphone" placeholder="请输入手机号">
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="form-group">
+		<label class="sr-only" for="email"></label>
+		<input type="text" class="form-control" name="email" id="telphone" placeholder="请输入邮箱">
 	</div>
 	<div style="height: 10px;"></div>
 	<button type="submit" class="btn btn-default">提交</button>

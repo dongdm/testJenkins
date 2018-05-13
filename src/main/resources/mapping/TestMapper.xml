@@ -4,23 +4,60 @@
   <resultMap id="BaseResultMap" type="com.dong.model.Test" >
   	<result property="id" column="id" />
   	<result property="name" column="name" />
+  	<result property="telphone" column="telphone" />
+  	<result property="email" column="email" />
+  	<result property="createdate" column="createdate" />
   </resultMap>
   
   <select id="selectAll" resultMap="BaseResultMap">
-  	select * from t_test
+  	select id,name,telphone,email,createdate from t_test
   </select>
   
   <update id="updateById" parameterType="com.dong.model.Test">
-  	update t_test set name=#{name} where id=#{id}
+  	update t_test 
+  	<trim prefix="set" suffixOverrides=",">
+	  	<if test="name != null and name != ''">
+	  		name=#{name}, 
+	  	</if>
+	  	<if test="email != null and email != ''">
+	  		email=#{email}, 
+	  	</if>
+	  	<if test="telphone != null and telphone != ''">
+	  		telphone=#{telphone}, 
+	  	</if>
+  	</trim>
+  	where id=#{id}
   </update>
   
   <select id="selectById" resultMap="BaseResultMap">
   	select * from t_test where id=#{id}
   </select>
   
-  <select id="add" parameterType="com.dong.model.Test">
-  	insert into t_test(id,name) values(#{id},#{name})
-  </select>
+  <insert id="add" parameterType="com.dong.model.Test">
+  	insert into t_test
+  	<trim prefix="(" suffixOverrides="," suffix=")">
+  		<if test="name != null and name != ''">
+  			name,
+  		</if>
+  		<if test="email != null and email != ''">
+  			email,
+  		</if>
+  		<if test="telphone != null and telphone != ''">
+  			telphone,
+  		</if>
+  	</trim>
+  	<trim prefix=" values(" suffixOverrides="," suffix=")">
+  		<if test="name != null and name != ''">
+  			#{name},
+  		</if>
+  		<if test="email != null and email != ''">
+  			#{email},
+  		</if>
+  		<if test="telphone != null and telphone != ''">
+  			#{telphone},
+  		</if>
+  	</trim>
+  </insert>
   
   
   <select id="deleteById">

@@ -25,7 +25,7 @@
    </div>
  </nav>
 <div class="container" style="margin-top: 65px;">
-<form action="<%=request.getContextPath()%>/user/doLogin" method="post" class="form-inline" role="form">
+<form action="<%=request.getContextPath()%>/doLogin" method="post" class="form-inline" role="form">
 	<div class="form-group">
 		<label class="sr-only" for="account">名称</label>
 		<input typ="text" class="form-control" name="account" id="account" placeholder="名称">

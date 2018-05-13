@@ -7,8 +7,20 @@
 <title>登录</title>
 </head>
 <body>
-登录成功，${word} 
-</br>
-${list}
+<div class="continer">
+	<form action="./user/doLogin">
+	<div class="tr">
+		<label>account:</label>
+		<input type="input" name="account"/>
+	</div>
+	<div class="tr">
+		<label>password:</label>
+		<input type="password" name="password"/>
+	</div>
+	<div>
+		<input type="submit" value="login"/>
+	</div>
+	</form>
+</div>
 </body>
 </html>

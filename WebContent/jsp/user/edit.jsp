@@ -7,7 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale = 1.0">
 <link href="<%=request.getContextPath()%>/resources/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<title>登录</title>
+
+<title>修改</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -29,49 +30,24 @@
      </div><!--/.nav-collapse -->
    </div>
  </nav>
-<div class="container" style="margin-top: 50px;">
-	<div class="col-md-12">
-         <table class="table table-striped">
-           <thead>
-             <tr>
-               <th>编号</th>
-               <th>名称</th>
-               <th>操作</th>
-             </tr>
-           </thead>
-           <tbody  id="example"></tbody>
-         </table>
-       </div>
+<div class="container" style="margin-top: 65px;">
+<h1>修改-编号[${test.id}]</h1>
+<form action="<%=request.getContextPath()%>/user/doEdit" method="post" class="form-inline" role="form">
+	<div class="form-group">
+		<label class="sr-only" for="id">编号</label>
+		<input typ="text" class="form-control sr-only" name="id" id="id" placeholder="请输入编号" value="${test.id}"/>
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="form-group">
+		<label class="sr-only" for="name">名称</label>
+		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称" value="${test.name}"/>
+	</div>
+	<div style="height: 10px;"></div>
+	<button type="submit" class="btn btn-default">提交</button>
+</form>
+
 </div>
-	
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/JSXTransformer.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/react.js"></script>
-<script type="text/jsx">
-	var path="<%=request.getContextPath()%>/user/";
-	var arr = ${list};
-	//var arr = ['Alice','Emily','Kate'];
-    React.render(
-        <tbody>
-			{
-				arr.map(function(item){
-					var id = item.id;
-					var delPath=path+"del?id="+id;
-					var editPath=path+"editPage?id="+id;
-					return <tr>
-							<td>{id}</td>
-							<td>{item.name}</td>
-							<td><a href={editPath}><span className="label label-default">修改</span></a>
-                                &nbsp;&nbsp;
-							    <a href={delPath}><span className="label label-default">删除</span></a>
-							</td>
-							</tr>
-				})
-			}
-		</tbody>,
-        document.getElementById('example')
-    );  
-</script>
 </body>
 </html>

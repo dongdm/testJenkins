@@ -9,5 +9,22 @@
   <select id="selectAll" resultMap="BaseResultMap">
   	select * from t_test
   </select>
+  
+  <update id="updateById" parameterType="com.dong.model.Test">
+  	update t_test set name=#{name} where id=#{id}
+  </update>
+  
+  <select id="selectById" resultMap="BaseResultMap">
+  	select * from t_test where id=#{id}
+  </select>
+  
+  <select id="add" parameterType="com.dong.model.Test">
+  	insert into t_test(id,name) values(#{id},#{name})
+  </select>
+  
+  
+  <select id="deleteById">
+  	delete from t_test where id=#{id}
+  </select>
    
 </mapper>

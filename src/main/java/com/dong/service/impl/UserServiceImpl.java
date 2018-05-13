@@ -26,5 +26,24 @@ public class UserServiceImpl implements UserService{
 		return result;
 	}
 
+	@Override
+	public void delete(Integer id) {
+		testMapper.deleteById(id);
+	}
+
+	@Override
+	public void add(Test test) {
+		testMapper.add(test);
+	}
+
+	@Override
+	public void update(Test test) {
+		testMapper.updateById(test);
+	}
+	
+	public Test selectOne(Integer id) {
+		return testMapper.selectById(id);
+	}
+
 
 }

@@ -34,11 +34,11 @@
          <table class="table table-striped">
            <thead>
              <tr>
-               <th>编号</th>
-               <th>名称</th>
-               <th>手机号</th>
-               <th>邮箱</th>
-               <th>操作</th>
+               <th class="col-md-1"></th>
+               <th class="col-md-2">名称</th>
+               <th class="col-md-3">手机号</th>
+               <th class="col-md-12 visible-md-block visible-lg-block">邮箱</th>
+               <th class="col-md-3">操作</th>
              </tr>
            </thead>
            <tbody  id="example"></tbody>
@@ -62,11 +62,11 @@
 					var delPath=path+"del?id="+id;
 					var editPath=path+"editPage?id="+id;
 					return <tr>
-							<td>{id}</td>
-							<td>{item.name}</td>
-							<td>{item.telphone}</td>
-							<td>{item.email}</td>
-							<td><a href={editPath}><span className="label label-default">修改</span></a>
+							<td className="col-md-1">{id}</td>
+							<td className="col-md-2">{item.name}</td>
+							<td className="col-md-3">{item.telphone}</td>
+							<td className="col-md-12 visible-md-block visible-lg-block">{item.email}</td>
+							<td className="col-md-3"><a href={editPath}><span className="label label-default">修改</span></a>
                                 &nbsp;&nbsp;
 							    <a href={delPath}><span className="label label-default">删除</span></a>
 							</td>

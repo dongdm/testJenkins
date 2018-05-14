@@ -26,14 +26,23 @@
  </nav>
 <div class="container" style="margin-top: 65px;">
 <form action="<%=request.getContextPath()%>/doLogin" method="post" class="form-inline" role="form">
-	<div class="form-group">
-		<label class="sr-only" for="account">名称</label>
-		<input typ="text" class="form-control" name="account" id="account" placeholder="名称">
+	<div class="input-group">
+		<label class="sr-only" for="account">账号</label>
+		<input typ="text" class="form-control" name="account" id="account" placeholder="请输入账号">
 	</div>
 	<div style="height: 10px;"></div>
-	<div class="form-group">
+	<div class="input-group">
 		<label class="sr-only" for="password">密码</label>
-		<input type="text" class="form-control" name="password" id="password" placeholder="请输入密码">
+		<input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="input-group col-md-3">
+		<label class="sr-only" for="verfyCode">验证码</label>
+		<input type="text" class="form-control" name="verfyCode" id="verfyCode" 
+			placeholder="请输入验证码">
+		<span class="input-group-btn" maxlength="4">
+			<img src="<%=request.getContextPath()%>/kaptcha" id="kaptchaImage" title="看不清，点击换一张">
+		</span>
 	</div>
 	<div style="height: 10px;"></div>
 	<button type="submit" class="btn btn-default">提交</button>
@@ -42,5 +51,13 @@
 </div>
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">  
+$(function(){         
+    $('#kaptchaImage').click(function () {//生成验证码  
+     $(this).hide().attr('src', '<%=request.getContextPath()%>/kaptcha?' + Math.floor(Math.random()*100) ).fadeIn();  
+     event.cancelBubble=true;  
+    });  
+});  
+</script>
 </body>
 </html>

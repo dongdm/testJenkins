@@ -41,12 +41,14 @@
 	<div style="height: 10px;"></div>
 	<div class="form-group">
 		<label class="sr-only" for="telphone">手机号</label>
-		<input type="text" class="form-control" name="telphone" id="telphone" placeholder="请输入手机号">
+		<input type="text" class="form-control" name="telphone" id="telphone" placeholder="请输入手机号" 
+			value="${test.telphone}"/>
 	</div>
 	<div style="height: 10px;"></div>
 	<div class="form-group">
 		<label class="sr-only" for="email"></label>
-		<input type="text" class="form-control" name="email" id="email" placeholder="请输入邮箱">
+		<input type="text" class="form-control" name="email" id="email" placeholder="请输入邮箱" 
+			value="${test.telphone}"/>
 	</div>
 	<div style="height: 10px;"></div>
 	<button type="submit" class="btn btn-default">提交</button>

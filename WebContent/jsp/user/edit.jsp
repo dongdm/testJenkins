@@ -34,6 +34,7 @@
 <h1>修改-编号[${test.id}]</h1>
 <form action="<%=request.getContextPath()%>/user/doEdit" method="post" class="form-inline" role="form">
 	<div class="form-group">
+		<input type="hidden" name="id" value="${test.id}"/> 
 		<label class="sr-only" for="name">名称</label>
 		<input type="text" class="form-control" name="name" id="name" placeholder="请输入名称" value="${test.name}"/>
 	</div>
